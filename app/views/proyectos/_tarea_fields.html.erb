@@ -6,4 +6,7 @@
   <%= f.label :prioridad %><br>
   <%= f.text_field :prioridad %>
 </div>
+<div class="field">
+  <%= f.collection_check_boxes :empleado_ids, Empleado.all, :id, :nombre_completo %>
+</div>
 <%= f.link_to_remove "Eliminar esta tarea" %>

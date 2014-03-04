@@ -15,7 +15,8 @@
   <p>
     <% @proyecto.tareas.each do |tarea| %>
       Nombre: <%= tarea.nombre %><br/>
-      Prioridad: <%= tarea.prioridad %>
+      Prioridad: <%= tarea.prioridad %><br/>
+      Empleados: <%= tarea.empleados.map(&:nombre_completo).to_sentence %>
       <hr/>
     <% end %>
   </p>

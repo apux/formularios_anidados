@@ -72,7 +72,7 @@ class ProyectosController < ApplicationController
     def proyecto_params
       params.require(:proyecto).permit(
         :nombre, :fecha_entrega, tareas_attributes: [
-          :id, :nombre, :prioridad, :_destroy
+          :id, :nombre, :prioridad, :_destroy, empleado_ids: []
         ]
       )
     end

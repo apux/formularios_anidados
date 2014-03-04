@@ -15,6 +15,7 @@ class ProyectosController < ApplicationController
   # GET /proyectos/new
   def new
     @proyecto = Proyecto.new
+    2.times { @proyecto.tareas.build }
   end
 
   # GET /proyectos/1/edit
